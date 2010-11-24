@@ -1,0 +1,5 @@
+set nobackup
+set nowritebackup
+set noswapfile
+" remove specific folders from the autcomplete to speed up command-T
+set wig=public/system/*,public/stylesheets/*,profiles/*,tmp/*,log/*
