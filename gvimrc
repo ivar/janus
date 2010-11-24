@@ -65,7 +65,7 @@ endif
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+color railscasts+
 
 " ConqueTerm wrapper
 function StartTerm()

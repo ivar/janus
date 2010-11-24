@@ -3,3 +3,32 @@ set nowritebackup
 set noswapfile
 " remove specific folders from the autcomplete to speed up command-T
 set wig=public/system/*,public/stylesheets/*,profiles/*,tmp/*,log/*
+
+set foldenable                  " enable folding
+set foldcolumn=2                " add a fold column
+set foldmethod=marker           " detect triple-{ style fold markers
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
+
+set wildignore+=*.swp,*.bak,*.pyc,*.class "add to wildignore files
+
+" Since we rarely use the ; key anyway, this is a real optimization for almost
+" all Vim commands, since we don't have to press that annoying Shift key that
+" slows the commands down
+nnoremap ; :
+
+" Remap j and k to act as expected when used on long, wrapped, lines
+nnoremap j gj
+nnoremap k gk
+
+" Sudo to write
+cmap w!! w !sudo tee % >/dev/null
+
+" Use Q for formatting the current paragraph (or visual selection)
+vmap Q gq
+nmap Q gqap
+
+" Include user's custom vim config
+if filereadable(expand("~/.vimrc.custom"))
+  source ~/.vimrc.custom
+endif
+
