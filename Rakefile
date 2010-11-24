@@ -144,6 +144,7 @@ vim_plugin_task "autoclose",        "git://github.com/Townk/vim-autoclose.git"
 vim_plugin_task "markdown",         "git://github.com/tpope/vim-markdown.git"
 vim_plugin_task "align",            "git://github.com/tsaleh/vim-align.git"
 vim_plugin_task "unimpaired",       "git://github.com/tpope/vim-unimpaired.git"
+vim_plugin_task "bufferexploer",    "http://www.vim.org/scripts/download_script.php?src_id=14208"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -206,7 +207,7 @@ end
 
 desc "link vimrc to ~/.vimrc"
 task :link_vimrc do
-  %w[ vimrc gvimrc ].each do |file|
+  %w[ vimrc gvimrc vimrc.local gvimrc.local ].each do |file|
     dest = File.expand_path("~/.#{file}")
     unless File.exist?(dest)
       ln_s(File.expand_path("../#{file}", __FILE__), dest)
