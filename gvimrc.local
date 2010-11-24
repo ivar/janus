@@ -7,5 +7,14 @@ if has("gui_macvim")
 
   " toggle fullscreen mode
   map <D-+> :set invfu<CR> 
+
+  " Include user's custom vim config
+  if filereadable(expand("~/.gvimrc.custom"))
+    source ~/.gvimrc.custom
+  endif
+
+  " Default gui color scheme
+  color railscasts+
+
 endif
 
