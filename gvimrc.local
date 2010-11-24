@@ -1,7 +1,6 @@
 if has("gui_macvim")
   set guioptions=aAce
-"   set guifont=Monaco:h15
-
+  "   set guifont=Monaco:h15
   " automatically enter full screen mode
   "au GUIEnter * set fullscreen
 
@@ -15,5 +14,4 @@ if has("gui_macvim")
   if filereadable(expand("~/.gvimrc.custom"))
     source ~/.gvimrc.custom
   endif
-
 endif
