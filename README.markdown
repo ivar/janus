@@ -22,7 +22,7 @@ report an issue to the issue tracker.
 
 0. `for i in ~/.vim ~/.vimrc ~/.gvimrc; do [ -e $i ] && mv $i $i.old;
    done`
-1. `git clone git://github.com/carlhuda/janus.git ~/.vim`
+1. `git clone git://github.com/partnerpedia/janus.git ~/.vim`
 2. `cd ~/.vim`
 3. `rake`
 
