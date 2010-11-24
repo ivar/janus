@@ -154,6 +154,7 @@ vim_plugin_task "syntastic",        "git://github.com/scrooloose/syntastic.git"
 vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
+vim_plugin_task "bufferexploer",    "http://www.vim.org/scripts/download_script.php?src_id=14208"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -228,7 +229,7 @@ end
 
 desc "link vimrc to ~/.vimrc"
 task :link_vimrc do
-  %w[ vimrc gvimrc ].each do |file|
+  %w[ vimrc gvimrc vimrc.local gvimrc.local ].each do |file|
     dest = File.expand_path("~/.#{file}")
     unless File.exist?(dest)
       ln_s(File.expand_path("../#{file}", __FILE__), dest)
