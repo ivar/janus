@@ -1,8 +1,9 @@
 set nobackup
 set nowritebackup
 set noswapfile
+
 " remove specific folders from the autcomplete to speed up command-T
-set wig=public/system/*,public/stylesheets/*,profiles/*,tmp/*,log/*
+set wig=public/system/*,public/stylesheets/*,profiles/*,tmp/*,log/*,db/backups/*
 
 set foldenable                  " enable folding
 set foldcolumn=2                " add a fold column
@@ -26,6 +27,23 @@ cmap w!! w !sudo tee % >/dev/null
 " Use Q for formatting the current paragraph (or visual selection)
 vmap Q gq
 nmap Q gqap
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+:endfunction
+
+set list listchars=trail:.,extends:>
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+map <F2> :call TrimWhiteSpace()<CR>
+map! <F2> :call TrimWhiteSpace()<CR>
+
+map <F12> :NERDTreeFind<CR>
 
 " Include user's custom vim config
 if filereadable(expand("~/.vimrc.custom"))
