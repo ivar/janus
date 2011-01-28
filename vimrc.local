@@ -1,6 +1,7 @@
 set nobackup
 set nowritebackup
 set noswapfile
+set hidden
 
 " remove specific folders from the autcomplete to speed up command-T
 set wig=public/system/*,public/stylesheets/*,profiles/*,tmp/*,log/*,db/backups/*
@@ -51,3 +52,10 @@ if filereadable(expand("~/.vimrc.custom"))
   source ~/.vimrc.custom
 endif
 
+"set statusline=%{fugitive#statusline()}
+
+" Use ctrl + movement keys to move around windows
+map <C-H> <C-W>h<C-W>_
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W>_
