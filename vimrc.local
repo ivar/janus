@@ -32,6 +32,7 @@ nmap Q gqap
 function TrimWhiteSpace()
   %s/\s*$//
   ''
+  :retab
 :endfunction
 
 set list listchars=trail:.,extends:>
