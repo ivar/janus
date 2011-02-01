@@ -51,11 +51,3 @@ map <F12> :NERDTreeFind<CR>
 if filereadable(expand("~/.vimrc.custom"))
   source ~/.vimrc.custom
 endif
-
-"set statusline=%{fugitive#statusline()}
-
-" Use ctrl + movement keys to move around windows
-map <C-H> <C-W>h<C-W>_
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l<C-W>_
