@@ -13,10 +13,12 @@ set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 
 set wildignore+=*.swp,*.bak,*.pyc,*.class "add to wildignore files
 
+
+" Update - move to vimrc.custom - I (Ivar) would like to experiment with using the ; key
 " Since we rarely use the ; key anyway, this is a real optimization for almost
 " all Vim commands, since we don't have to press that annoying Shift key that
 " slows the commands down
-nnoremap ; :
+" nnoremap ; :
 
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
