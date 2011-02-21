@@ -20,6 +20,9 @@ set wildignore+=*.swp,*.bak,*.pyc,*.class "add to wildignore files
 " slows the commands down
 " nnoremap ; :
 
+" Un-highlight search matches
+nnoremap <leader><leader> :noh<CR>
+
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
 nnoremap k gk
