@@ -52,6 +52,10 @@ map! <F2> :call TrimWhiteSpace()<CR>
 
 map <F12> :NERDTreeFind<CR>
 
+" enable ruby folding, default to unfolded
+let Ruby_fold=1
+set foldlevelstart=99
+
 " Include user's custom vim config
 if filereadable(expand("~/.vimrc.custom"))
   source ~/.vimrc.custom
