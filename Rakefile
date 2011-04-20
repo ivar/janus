@@ -131,7 +131,7 @@ vim_plugin_task "javascript",       "git://github.com/pangloss/vim-javascript.gi
 vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
 vim_plugin_task "markdown_preview", "git://github.com/robgleeson/vim-markdown-preview.git"
 vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
-vim_plugin_task "nerdcommenter",    "git://github.com/ddollar/nerdcommenter.git"
+vim_plugin_task "tcommenter",       "git://github.com/tomtom/tcomment_vim.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
 vim_plugin_task "taglist",          "git://github.com/vim-scripts/taglist.vim.git"
 vim_plugin_task "vividchalk",       "git://github.com/tpope/vim-vividchalk.git"
