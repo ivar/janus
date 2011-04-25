@@ -34,6 +34,12 @@ cmap w!! w !sudo tee % >/dev/null
 vmap Q gq
 nmap Q gqap
 
+" map TComment plugin command to easier key
+map <Leader>c <c-_><c-_>
+
+" alternative mehtod of invoking CommandT for consoles
+map <Leader>t :CommandT
+
 " Removes trailing spaces
 function TrimWhiteSpace()
   %s/\s*$//
