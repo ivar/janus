@@ -155,7 +155,6 @@ vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "bufferexploer",    "http://www.vim.org/scripts/download_script.php?src_id=14208"
-vim_plugin_task "ruby-debugger",    "git://github.com/astashov/vim-ruby-debugger.git"
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
