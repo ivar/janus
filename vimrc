@@ -143,6 +143,10 @@ runtime! macros/matchit.vim
 " Show (partial) command in the status line
 set showcmd
 
+" This makes cmd-d open up a vertical split, and cmd-shift-d open up a horizontal one. Same keybindings as in iterm2
+nnoremap <D-d> <C-w>v<C-w>l
+nnoremap <D-D> <C-w>s<C-w>j
+
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
