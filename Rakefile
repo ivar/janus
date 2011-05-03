@@ -129,7 +129,6 @@ vim_plugin_task "haml",             "git://github.com/tpope/vim-haml.git"
 vim_plugin_task "indent_object",    "git://github.com/michaeljsmith/vim-indent-object.git"
 vim_plugin_task "javascript",       "git://github.com/pangloss/vim-javascript.git"
 vim_plugin_task "jslint",           "git://github.com/hallettj/jslint.vim.git"
-vim_plugin_task "markdown_preview", "git://github.com/robgleeson/vim-markdown-preview.git"
 vim_plugin_task "nerdtree",         "git://github.com/wycats/nerdtree.git"
 vim_plugin_task "tcommenter",       "git://github.com/tomtom/tcomment_vim.git"
 vim_plugin_task "surround",         "git://github.com/tpope/vim-surround.git"
@@ -156,6 +155,10 @@ vim_plugin_task "puppet",           "git://github.com/ajf/puppet-vim.git"
 vim_plugin_task "scala",            "git://github.com/bdd/vim-scala.git"
 vim_plugin_task "gist-vim",         "git://github.com/mattn/gist-vim.git"
 vim_plugin_task "bufferexploer",    "http://www.vim.org/scripts/download_script.php?src_id=14208"
+
+vim_plugin_task "hammer",           "git://github.com/robgleeson/hammer.vim.git" do
+  sh "gem install github-markup redcarpet"
+end
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
