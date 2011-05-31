@@ -1,6 +1,7 @@
 if has("gui_macvim")
   set guioptions=aAce
-  set guifont=Menlo:h12
+  set guifont=Inconsolata:h15
+  "set guifont=Menlo:h12
 
   " automatically enter full screen mode
   "au GUIEnter * set fullscreen
