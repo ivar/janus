@@ -16,6 +16,14 @@ if has("gui_macvim")
   " Command-e for ConqueTerm
   map <D-e> :call StartTerm()<CR>
 
+  " Mappings for sweet-rspec-vim
+  "(CMD-r) or (Apple-r)
+  map <D-r> :SweetVimRspecRunFile<CR>
+  "(SHIFT-CMD-r)
+  map <D-R> :SweetVimRspecRunFocused<CR>
+  "(OPT-CMD-r)
+  map <M-D-r> :SweetVimRspecRunPrevious<CR>
+
   " Command-/ to toggle comments
   map <D-/> <plug>NERDCommenterToggle<CR>
   imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
@@ -105,7 +113,7 @@ function s:CdIfDirectory(directory)
 
   " Allows reading from stdin
   " ex: git diff | mvim -R -
-  if strlen(a:directory) == 0 
+  if strlen(a:directory) == 0
     return
   endif
 
